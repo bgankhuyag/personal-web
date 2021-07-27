@@ -1,0 +1,26 @@
+:root {
+  --imperial-red: #e63946ff;
+  --honeydew: #f1faeeff;
+  --powder-blue: #a8dadcff;
+  --celadon-blue: #457b9dff;
+  --prussian-blue: #1d3557ff;
+  --gradient: linear-gradient(
+    45deg,
+    #f72585ff,
+    #b5179eff,
+    #7209b7ff,
+    #560badff,
+    #480ca8ff,
+    #3a0ca3ff,
+    #3f37c9ff,
+    #4361eeff,
+    #4895efff,
+    #4cc9f0ff
+  );
+  --gradient1: linear-gradient(45deg, #f94144ff, #f3722cff, #f8961eff, #f9c74fff, #90be6dff, #43aa8bff, #577590ff);
+}
+
+.home {
+  background-color: var(--prussian-blue);
+  min-height: 100vh;
+}

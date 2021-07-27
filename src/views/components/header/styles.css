@@ -1,0 +1,23 @@
+.name {
+  font-weight: 900;
+  font-size: 6rem;
+  background-image: var(--gradient1);
+  background-clip: text;
+  color: transparent;
+  background-size: 250%;
+  animation: bg 10s infinite alternate;
+}
+
+@keyframes bg {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.intro {
+  color: white;
+ font-size: 5rem;
+}
