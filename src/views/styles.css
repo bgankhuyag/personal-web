@@ -22,5 +22,10 @@
 
 .home {
   background-color: var(--prussian-blue);
-  min-height: 100vh;
+  /* min-height: auto; */
+}
+
+.content {
+  max-width: 2000px;
+  margin: auto;
 }
