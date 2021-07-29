@@ -18,6 +18,7 @@
     #4cc9f0ff
   );
   --gradient1: linear-gradient(45deg, #f94144ff, #f3722cff, #f8961eff, #f9c74fff, #90be6dff, #43aa8bff, #577590ff);
+  --gradient2: linear-gradient(45deg, #bb0116ff, #e4b507ff, #fbe53aff, #fcfb7cff, #eae7d8ff);
 }
 
 .home {
