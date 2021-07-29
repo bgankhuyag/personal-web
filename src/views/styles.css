@@ -23,7 +23,8 @@
 
 .home {
   background-color: var(--prussian-blue);
-  /* min-height: auto; */
+  font-family: "Itim";
+  color: #fff;
 }
 
 .content {
