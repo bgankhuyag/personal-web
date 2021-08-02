@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../button/index'
 import '../styles.css'
 
 const Nav = () => {
@@ -6,14 +7,15 @@ const Nav = () => {
 
   window.addEventListener("scroll", () => {
     setScroll(window.scrollY > 50);
-    // console.log(scroll);
   });
 
   return (
-    <div className={scroll ? "nav" : "nav filled"}>
-      <a>About</a>
-      <a>Projects</a>
-      <a>Contact</a>
+    <div className="nav">
+      <a href="#" className="link">00. About</a>
+      <a href="#" className="link">01. Experience</a>
+      <a href="#" className="link">10. Projects</a>
+      <a href="#" className="link">11. Contact</a>
+      <Button>Resume</Button>
     </div>
   )
 }
