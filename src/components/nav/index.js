@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../button/index'
 import Logo from '../logo/index'
 import '../styles.css'
@@ -20,7 +20,7 @@ const Nav = () => {
         <a href="#" className="link"><span className="number">11.</span> Contact</a>
         <Button>Resume</Button>
       </div>
-      <div className="menu">
+      <div className="menu" id="menu">
         <span className="link"><i class="fas fa-bars"></i></span>
       </div>
     </div>

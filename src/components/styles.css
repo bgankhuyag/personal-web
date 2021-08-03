@@ -117,6 +117,59 @@
   font-size: 1.5rem;
 }
 
+.menu-links {
+  font-size: 1.1em;
+  z-index: 100;
+  position: fixed;
+  right: 0px;
+  height: 100vh;
+  top: 0px;
+  background-color: var(--light-blue);
+  max-width: 300px;
+  width: 50%;
+  min-width: 200px;
+  text-align: center;
+  filter: blur(0);
+  overflow: scroll;
+}
+
+.open {
+  animation: open-menu 0.5s;
+  display: block;
+}
+
+.close {
+  right: -300px;
+}
+
+.close-animation {
+  animation: close-menu 0.5s;
+}
+
+@keyframes open-menu {
+  0% {
+    right: -300px;
+  }
+  100 {
+    right: 0px;
+  }
+}
+
+@keyframes close-menu {
+  0% {
+    right: 0px;
+  }
+  100 {
+    right: -300px;
+  }
+}
+
+.blur {
+  filter: blur(5px);
+  z-index: -1;
+  pointer-events: none;
+}
+
 @media only screen and (max-width: 768px) {
   .intro {
     font-size: 1.5rem;
@@ -149,32 +202,22 @@
   }
 }
 
-.menu-links {
-  /* display: none; */
-  z-index: 100;
-  position: fixed;
-  right: 0px;
-  height: 100vh;
-  top: 0px;
-  background-color: var(--light-blue);
-  max-width: 300px;
-  min-width: 50%;
-  text-align: center;
-  filter: blur(0);
+.menu-links .menu-close {
+  text-align: right;
+  font-size: 2rem;
+  margin: 10px 20px 0px 0px;
 }
 
-.content {
-  filter: blur(5px);
-  z-index: -1;
-  pointer-events: none;
+.menu-links div {
+  margin: 2em;
 }
 
 .menu-link {
-  display: block;
   text-decoration: none;
   color: var(--honeydew);
   transition: all 0.3s;
   cursor: pointer;
+  position: relative;
 }
 
 .menu-link:hover,
