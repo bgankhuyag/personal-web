@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/header/index'
 import Nav from '../components/nav/index'
 import Links from '../components/links/index'
+import Menu from '../components/menu/index'
 import './styles.css'
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
         <Header />
         <Header />
       </div>
+      <Menu />
     </div>
   )
 }

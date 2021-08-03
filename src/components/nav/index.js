@@ -21,7 +21,7 @@ const Nav = () => {
         <Button>Resume</Button>
       </div>
       <div className="menu">
-        <i class="fas fa-bars"></i>
+        <span className="link"><i class="fas fa-bars"></i></span>
       </div>
     </div>
   )
