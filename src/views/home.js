@@ -11,6 +11,9 @@ const Home = () => {
       <div className="content">
         <Nav />
         <Header />
+        <Header />
+        <Header />
+        <Header />
       </div>
     </div>
   )
