@@ -11,10 +11,10 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <a href="#" className="link">00. About</a>
-      <a href="#" className="link">01. Experience</a>
-      <a href="#" className="link">10. Projects</a>
-      <a href="#" className="link">11. Contact</a>
+      <a href="#" className="link"><span className="number">00.</span> About</a>
+      <a href="#" className="link"><span className="number">01.</span> Experience</a>
+      <a href="#" className="link"><span className="number">10.</span> Projects</a>
+      <a href="#" className="link"><span className="number">11.</span> Contact</a>
       <Button>Resume</Button>
     </div>
   )

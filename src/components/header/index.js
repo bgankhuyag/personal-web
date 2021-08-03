@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../nav/index'
 import Button from '../button/index'
 import image from '../../profile.jpeg'
 import '../styles.css'
@@ -20,15 +19,12 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Nav />
-      <div className="header-content">
-        <div className="intro">
-          {intro1} <br /> <span className="name">Batbold Gankhuyag</span>. <br /> {intro2}. <br /> <br />
-          <Button size="1rem">Contact Me</Button>
-        </div>
-        <div className="profile">
-          <img className="img" src={image} alt="profile"/>
-        </div>
+      <div className="intro">
+        {intro1} <br /> <span className="name">Batbold Gankhuyag</span>. <br /> {intro2}. <br /> <br />
+        <Button size="1rem">Contact Me</Button>
+      </div>
+      <div className="profile">
+        <img className="img" src={image} alt="profile"/>
       </div>
     </div>
   )

@@ -40,6 +40,19 @@
 }
 
 .content {
-  max-width: 2000px;
   margin: auto;
+  padding: 0px 8rem;
+  max-width: 1800px;
+}
+
+@media only screen and (max-width: 948px) {
+  .content {
+    padding: 0px 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 0px 3rem;
+  }
 }
