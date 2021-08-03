@@ -20,6 +20,9 @@ const Nav = () => {
         <a href="#" className="link"><span className="number">11.</span> Contact</a>
         <Button>Resume</Button>
       </div>
+      <div className="menu">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
   )
 }
