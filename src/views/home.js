@@ -3,6 +3,7 @@ import Header from '../components/header/index'
 import Nav from '../components/nav/index'
 import Links from '../components/links/index'
 import Menu from '../components/menu/index'
+import Experience from '../components/experience/index'
 import './styles.css'
 
 const Home = () => {
@@ -26,16 +27,15 @@ const Home = () => {
 
   window.addEventListener('click', function(e){
     if (document.getElementById('menu-links')) {
-      if (document.getElementById('menu-links').contains(e.target)){
-        // Clicked in box
-      } else{
-        // Clicked outside the box
-        handleClose();
+      if (!document.getElementById('menu-links').contains(e.target)){
+        if (document.getElementById('menu-links').classList.contains("open")) {
+          handleClose();
+
+        }
       }
     }
     if (document.getElementById('menu')) {
       if (document.getElementById('menu').contains(e.target)){
-        // Clicked in box
         handleOpen();
       }
     }
@@ -47,7 +47,8 @@ const Home = () => {
       <div className="content" id="content">
         <Nav />
         <Header />
-        <Header />
+        <Experience />
+        <Experience />
         <Header />
         <Header />
       </div>

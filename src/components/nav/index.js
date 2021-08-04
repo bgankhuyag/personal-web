@@ -15,13 +15,13 @@ const Nav = () => {
       <Logo />
       <div className="nav-links">
         <a href="#" className="link"><span className="number">00.</span> About</a>
-        <a href="#" className="link"><span className="number">01.</span> Experience</a>
+        <a href="#experience" className="link"><span className="number">01.</span> Experience</a>
         <a href="#" className="link"><span className="number">10.</span> Projects</a>
         <a href="#" className="link"><span className="number">11.</span> Contact</a>
         <Button>Resume</Button>
       </div>
       <div className="menu" id="menu">
-        <span className="link"><i class="fas fa-bars"></i></span>
+        <span className="link"><i className="fas fa-bars"></i></span>
       </div>
     </div>
   )

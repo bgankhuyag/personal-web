@@ -15,7 +15,7 @@
   --sky-blue-crayola-2-a: rgb(166, 242, 255, 0.15);
   --blizzard-blue: #ade8f4ff;
   --powder-blue: #caf0f8ff;
-  --georama: "Georama";
+  --font: "Georama";
   --gradient: linear-gradient(
     45deg,
     #f72585ff,
@@ -36,7 +36,7 @@
 
 .home {
   background-color: var(--prussian-blue);
-  font-family: var(--georama);
+  font-family: sans-serif;
   color: var(--honeydew);
 }
 
