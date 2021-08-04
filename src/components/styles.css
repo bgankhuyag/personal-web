@@ -520,3 +520,9 @@ li:before {
 .subheading .number {
   color: var(--sky-blue-crayola-2);
 }
+
+.about {
+  min-height: 100vh;
+  /* margin: auto; */
+  padding: 20px 0px;
+}

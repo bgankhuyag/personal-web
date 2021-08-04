@@ -4,6 +4,7 @@ import Nav from '../components/nav/index'
 import Links from '../components/links/index'
 import Menu from '../components/menu/index'
 import Experience from '../components/experience/index'
+import About from '../components/about/index'
 import './styles.css'
 
 const Home = () => {
@@ -47,7 +48,7 @@ const Home = () => {
       <div className="content" id="content">
         <Nav />
         <Header />
-        <Experience />
+        <About />
         <Experience />
         <Header />
         <Header />
