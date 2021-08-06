@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Button from '../button/index'
-import Logo from '../logo/index'
+import React from 'react';
+import Button from 'components/button/index'
+import Logo from 'components/logo/index'
 import '../styles.css'
 
 const Nav = () => {
-  const [scroll, setScroll] = useState(false);
-
-  window.addEventListener("scroll", () => {
-    setScroll(window.scrollY > 50);
-  });
-
   return (
     <div className="nav">
       <Logo />

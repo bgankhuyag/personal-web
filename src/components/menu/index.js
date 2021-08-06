@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../button/index'
+import Button from 'components/button/index'
 import '../styles.css'
 
 const Menu = ({
