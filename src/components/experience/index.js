@@ -44,7 +44,7 @@ const Experience = () => {
   })
 
   window.addEventListener("scroll", () => {
-    if (document.getElementById('experience').getBoundingClientRect().top <= (window.innerHeight * 4/5) && document.getElementById('about').getBoundingClientRect().top !== 0) {
+    if (document.getElementById('experience').getBoundingClientRect().top <= (window.innerHeight * 2/3) && document.getElementById('about').getBoundingClientRect().top !== 0) {
       document.getElementById('experience').classList.add('appear');
     }
   });
