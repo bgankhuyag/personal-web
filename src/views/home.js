@@ -50,8 +50,6 @@ const Home = () => {
         <Header />
         <About />
         <Experience />
-        <Header />
-        <Header />
       </div>
       <Menu handleClose={handleClose} />
     </div>
