@@ -50,7 +50,7 @@ const Experience = () => {
   });
 
   return (
-    <div className="exp" id="experience">
+    <div className="exp sub-content" id="experience">
       <SubHeading number="01" text="Experience" />
       <div className="exp-content">
         <div className="tab">

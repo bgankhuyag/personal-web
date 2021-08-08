@@ -11,7 +11,7 @@ const About = () => {
   });
 
   return (
-    <div className="about" id="about">
+    <div className="about sub-content" id="about">
       <SubHeading number="00" text="About" />
     </div>
   )

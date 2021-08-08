@@ -6,9 +6,9 @@ const SubHeading = ({
   text
 }) => {
   return (
-    <div className="subheading">
+    <h3 className="subheading">
       <span className="number">{number}.</span> {text}
-    </div>
+    </h3>
   )
 }
 

@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from '../components/header/index'
-import Nav from '../components/nav/index'
-import Links from '../components/links/index'
-import Menu from '../components/menu/index'
-import Experience from '../components/experience/index'
-import About from '../components/about/index'
+import Header from 'components/header'
+import Nav from 'components/nav'
+import Links from 'components/links'
+import Menu from 'components/menu'
+import Experience from 'components/experience/index'
+import About from 'components/about/index'
+import Projects from 'components/projects/index'
+import Contact from 'components/contact/index'
 import './styles.css'
 
 const Home = () => {
@@ -44,12 +46,14 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Links />
+      <Links position="fixed" />
       <div className="content" id="content">
         <Nav />
         <Header />
         <About />
         <Experience />
+        <Projects />
+        <Contact />
       </div>
       <Menu handleClose={handleClose} />
     </div>
