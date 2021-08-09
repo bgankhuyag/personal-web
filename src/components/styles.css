@@ -601,5 +601,38 @@ li:before {
 
 .input:focus {
   outline: none;
+}
+
+.input:not(.error):focus {
+  animation: focus 0.3s;
+  outline: none;
   border: 2px solid var(--sky-blue-crayola-2);
+}
+
+@keyframes focus {
+  0% {
+    border: 2px solid inherit;
+  }
+  100% {
+    border: 2px solid var(--sky-blue-crayola-2);
+  }
+}
+
+.error {
+  animation: error 0.3s;
+  border: 2px solid var(--imperial-red);
+}
+
+@keyframes error {
+  0% {
+    border: 2px solid var(--sky-blue-crayola-2);
+  }
+  100% {
+    border: 2px solid var(--imperial-red);
+  }
+}
+
+.error-message {
+  font-size: 0.6em;
+  color: var(--imperial-red);
 }

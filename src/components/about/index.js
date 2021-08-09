@@ -5,7 +5,8 @@ import '../styles.css'
 const About = () => {
 
   window.addEventListener("scroll", () => {
-    if (document.getElementById('about').getBoundingClientRect().top <= (window.innerHeight * 4/5)) {
+    if (document.getElementById('about').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
+        document.getElementById('about').getBoundingClientRect().top > -window.innerHeight) {
       document.getElementById('about').classList.add('appear');
     }
   });

@@ -4,7 +4,8 @@ import '../styles.css'
 
 const Projects = () => {
   window.addEventListener("scroll", () => {
-    if (document.getElementById('projects').getBoundingClientRect().top <= (window.innerHeight * 4/5)) {
+    if (document.getElementById('projects').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
+        document.getElementById('projects').getBoundingClientRect().top > -window.innerHeight) {
       document.getElementById('projects').classList.add('appear');
     }
   });

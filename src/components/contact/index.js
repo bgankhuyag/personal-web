@@ -9,49 +9,133 @@ import '../styles.css'
 
 init(user_id);
 
+const Error = ({ message }) => {
+  return (
+    <span className="error-message"><i className="fas fa-info-circle"></i> {message}</span>
+  )
+}
+
 const Contact = () => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
+  const [validName, setValidName] = useState(true);
+  const [validEmail, setValidEmail] = useState(true);
+  const [validMessage, setValidMessage] = useState(true);
 
   window.addEventListener("scroll", () => {
-    if (document.getElementById('contact').getBoundingClientRect().top <= (window.innerHeight * 4/5)) {
+    if (document.getElementById('contact').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
+        document.getElementById('contact').getBoundingClientRect().top > -window.innerHeight) {
       document.getElementById('contact').classList.add('appear');
     }
   });
 
   const handleChangeName = (e) => {
     setName(e.target.value)
+    if (e.target.value !== '') {
+      removeErrorName();
+    } else {
+      addErrorName();
+    }
   }
 
   const handleChangeMsg = (e) => {
     setMessage(e.target.value)
+    if (e.target.value !== '') {
+      removeErrorMsg();
+    } else {
+      addErrorMsg();
+    }
   }
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value)
+    if (e.target.value !== '') {
+      if (validateEmail(e.target.value)) {
+        removeErrorEmail();
+      } else {
+        addErrorEmail();
+      }
+    } else {
+      addErrorEmail();
+    }
+  }
+
+  const addErrorName = () => {
+    document.getElementById('from-name').classList.add('error');
+    setValidName(false);
+  }
+
+  const removeErrorName = () => {
+    document.getElementById('from-name').classList.remove('error');
+    setValidName(true);
+  }
+
+  const addErrorEmail = () => {
+    document.getElementById('from-email').classList.add('error');
+    setValidEmail(false);
+  }
+
+  const removeErrorEmail = () => {
+    document.getElementById('from-email').classList.remove('error');
+    setValidEmail(true);
+  }
+
+  const addErrorMsg = () => {
+    document.getElementById('message').classList.add('error');
+    setValidMessage(false);
+  }
+
+  const removeErrorMsg = () => {
+    document.getElementById('message').classList.remove('error');
+    setValidMessage(true);
+  }
+
+  const validateEmail = (val) => {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(val);
   }
 
   const validateForm = () => {
+    var valid = true;
     if (name === '') {
-
+      addErrorName();
+      valid = false;
+    } else {
+      removeErrorName();
     }
     if (email === '') {
-
+      addErrorEmail();
+      valid = false;
+    } else {
+      if (validateEmail(email)) {
+        removeErrorEmail();
+      } else {
+        addErrorEmail();
+        valid = false;
+      }
     }
     if (message === '') {
-
+      addErrorMsg();
+      valid = false;
+    } else {
+      removeErrorMsg();
     }
+    return valid;
   }
 
   const handleSendEmail = (e) => {
     e.preventDefault();
+    if (!validateForm()) return false;
     emailjs.send(service_id, template_id,{
       from_name: name,
       message: message,
       reply_to: email,
     }).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
+      setName('');
+      setEmail('');
+      setMessage('');
     }, (error) => {
       console.log('FAILED...', error);
     });
@@ -68,20 +152,32 @@ const Contact = () => {
           </p>
           <div className="info">
             <div className="contact-message">
-              <label for="from-name">Name</label>
+              <label htmlFor="from-name" id="from-name-label">Name</label>
               <input className="input" type="text" id="from-name" value={name} onChange={(e) => handleChangeName(e)} />
+              {
+                validName ? null :
+                <Error message="Please enter your name" />
+              }
             </div>
             <div className="contact-message">
-              <label for="from-email">Email</label>
+              <label htmlFor="from-email" id="from-email-label">Email</label>
               <input className="input" type="email" id="from-email" value={email} onChange={(e) => handleChangeEmail(e)} />
+              {
+                validEmail ? null :
+                <Error message="Please enter a valid email" />
+              }
             </div>
           </div>
           <div className="contact-message">
-            <label for="message">Message</label>
+            <label htmlFor="message" id="message-label">Message</label>
             <textarea className="input" id="message" rows="10" value={message} onChange={(e) => handleChangeMsg(e)} />
+            {
+              validMessage ? null :
+              <Error message="Please enter your message" />
+            }
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <Button size="1rem" handleClick={handleSendEmail}>Send</Button>
+          <div style={{ textAlign: 'right', disabled: 'true' }}>
+            <Button size="1rem" handleClick={handleSendEmail} disabled={!validName || !validEmail || !validMessage}>Send</Button>
           </div>
         </form>
         <p>
