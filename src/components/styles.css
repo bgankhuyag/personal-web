@@ -551,15 +551,8 @@ li:before {
 .contact-content {
   text-align: center;
   font-size: 1.2rem;
-  width: 80%;
-  margin: auto;
-  line-height: 2;
-}
-
-.email {
-  border-bottom: 2px solid var(--sky-blue-crayola-2);
-  z-index: 1;
-  color: var(--sky-blue-crayola-2);
+  /* margin: auto; */
+  /* width: 80%; */
 }
 
 .contact-link {
@@ -571,4 +564,42 @@ li:before {
 
 .contact-link:hover {
   top: -10px;
+}
+
+.contact-message {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.contact-form .info {
+  display: flex;
+  grid-gap: 5%;
+  flex-wrap: wrap;
+}
+
+.contact-form .info div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: var(--light-blue);
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid var(--sky-blue-crayola-2);
 }
