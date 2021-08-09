@@ -22,6 +22,7 @@ const Contact = () => {
   const [validName, setValidName] = useState(true);
   const [validEmail, setValidEmail] = useState(true);
   const [validMessage, setValidMessage] = useState(true);
+  const [load, setLoad] = useState(false);
 
   window.addEventListener("scroll", () => {
     if (document.getElementById('contact').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
@@ -127,6 +128,7 @@ const Contact = () => {
   const handleSendEmail = (e) => {
     e.preventDefault();
     if (!validateForm()) return false;
+    setLoad(true);
     emailjs.send(service_id, template_id,{
       from_name: name,
       message: message,
@@ -136,8 +138,10 @@ const Contact = () => {
       setName('');
       setEmail('');
       setMessage('');
+      setLoad(false);
     }, (error) => {
       console.log('FAILED...', error);
+      setLoad(false);
     });
   }
 
@@ -177,7 +181,7 @@ const Contact = () => {
             }
           </div>
           <div style={{ textAlign: 'right', disabled: 'true' }}>
-            <Button size="1rem" handleClick={handleSendEmail} disabled={!validName || !validEmail || !validMessage}>Send</Button>
+            <Button size="1rem" handleClick={handleSendEmail} disabled={!validName || !validEmail || !validMessage} load={load}>Send</Button>
           </div>
         </form>
         <p>

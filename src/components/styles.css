@@ -456,7 +456,7 @@
 }
 
 .active-tab-content {
-  animation: show-tab-content 0.5s;
+  animation: show-tab-content 1.5s;
 }
 
 @keyframes show-tab-content {
@@ -619,7 +619,7 @@ li:before {
 }
 
 .error {
-  animation: error 0.3s;
+  animation: error 0.2s;
   border: 2px solid var(--imperial-red);
 }
 
@@ -635,4 +635,21 @@ li:before {
 .error-message {
   font-size: 0.6em;
   color: var(--imperial-red);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  /* 50% {
+    transform: rotate(180deg);
+  } */
+  to {
+    transform: rotate(360deg);
+  }
 }
