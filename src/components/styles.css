@@ -31,7 +31,7 @@
 
 @keyframes pop-up {
   0% {
-    top: 20px;
+    top: 40px;
     opacity: 0;
   }
   100% {
@@ -646,10 +646,43 @@ li:before {
   from {
     transform: rotate(0deg);
   }
-  /* 50% {
-    transform: rotate(180deg);
-  } */
   to {
     transform: rotate(360deg);
   }
+}
+
+.toast {
+  animation: toast 0.5s;
+  position: fixed;
+  top: 20px;
+  left: calc(50% - 110px);
+  font-size: 0.9rem;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: var(--honeydew);
+  color: var(--prussian-blue);
+  border-radius: 15px;
+  padding: 0px 10px;
+  z-index: 500;
+}
+
+@keyframes toast {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+.success {
+  color: #70e000;
+  margin-right: 10px;
+}
+
+.fail {
+  color: var(--imperial-red);
+  margin-right: 10px;
 }

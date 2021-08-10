@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SubHeading from 'components/subHeading'
 import Links from 'components/links'
 import Button from 'components/button'
+import Toast from 'components/toast'
 import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
 import { user_id, service_id, template_id } from 'EnvironmentConfig/email'
@@ -23,6 +24,12 @@ const Contact = () => {
   const [validEmail, setValidEmail] = useState(true);
   const [validMessage, setValidMessage] = useState(true);
   const [load, setLoad] = useState(false);
+  const [toast, setToast] = useState({
+    item: null,
+    duration: null,
+    load: null,
+    success: null
+  });
 
   window.addEventListener("scroll", () => {
     if (document.getElementById('contact').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
@@ -129,23 +136,40 @@ const Contact = () => {
     e.preventDefault();
     if (!validateForm()) return false;
     setLoad(true);
+    setToast({
+      item: 'Sending Message...',
+      duration: 0,
+      load: true
+    });
     emailjs.send(service_id, template_id,{
       from_name: name,
       message: message,
       reply_to: email,
     }).then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
       setName('');
       setEmail('');
       setMessage('');
       setLoad(false);
+      setToast({
+        item: 'Message successfully sent!',
+        duration: 3000,
+        load: false,
+        success: true
+      });
     }, (error) => {
-      console.log('FAILED...', error);
       setLoad(false);
+      setToast({
+        item: 'Sorry, there was an error!',
+        duration: 3000,
+        load: false,
+        success: false
+      });
     });
   }
 
   return (
+    <>
+    <Toast item={toast.item} duration={toast.duration} load={toast.load} success={toast.success} />
     <div className="contact sub-content" id="contact">
       <SubHeading number="11" text="Contact" />
       <div className="contact-content">
@@ -181,7 +205,7 @@ const Contact = () => {
             }
           </div>
           <div style={{ textAlign: 'right', disabled: 'true' }}>
-            <Button size="1rem" handleClick={handleSendEmail} disabled={!validName || !validEmail || !validMessage} load={load}>Send</Button>
+            <Button size="1rem" handleClick={handleSendEmail} load={load}>Send</Button>
           </div>
         </form>
         <p>
@@ -190,6 +214,7 @@ const Contact = () => {
         <Links position="relative" />
       </div>
     </div>
+    </>
   )
 }
 
