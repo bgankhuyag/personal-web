@@ -661,6 +661,7 @@ li:before {
   height: 40px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   background: var(--honeydew);
   color: var(--prussian-blue);
   border-radius: 15px;
