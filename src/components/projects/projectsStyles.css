@@ -1,0 +1,46 @@
+.projects {
+  max-width: 800px;
+  margin: auto;
+}
+
+.project-item {
+  display: flex;
+  grid-gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+  /* border-bottom: 1px dashed var(--sky-blue-crayola-2-a-2); */
+  align-items: center;
+}
+
+.project-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 380px;
+  min-width: 300px;
+}
+
+.project-info {
+  background: var(--light-blue);
+  padding: 10px;
+  flex: 1;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.project-info .description {
+  margin: 10px 0px;
+}
+
+.project-link {
+  font-size: 1.5em;
+}
+
+.project-tools {
+  font-family: Consolas;
+  margin: 10px 0px;
+}
