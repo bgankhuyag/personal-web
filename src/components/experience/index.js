@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SubHeading from 'components/subHeading/index'
 import { exp } from 'data/data'
+import { showOnScroll } from 'utils/functions'
 import '../styles.css'
 
 const Experience = () => {
@@ -43,12 +44,7 @@ const Experience = () => {
     return <div className="tab-item" key={i} onClick={(e) => handleChange(e, index)}>{item.name}</div>
   })
 
-  window.addEventListener("scroll", () => {
-    if (document.getElementById('experience').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
-        document.getElementById('experience').getBoundingClientRect().top > -window.innerHeight) {
-      document.getElementById('experience').classList.add('appear');
-    }
-  });
+  showOnScroll('experience');
 
   return (
     <div className="exp sub-content" id="experience">

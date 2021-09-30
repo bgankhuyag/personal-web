@@ -6,6 +6,7 @@ import Toast from 'components/toast'
 import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
 import { user_id, service_id, template_id } from 'EnvironmentConfig/email'
+import { showOnScroll } from 'utils/functions'
 import '../styles.css'
 
 init(user_id);
@@ -31,12 +32,7 @@ const Contact = () => {
     success: null
   });
 
-  window.addEventListener("scroll", () => {
-    if (document.getElementById('contact').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
-        document.getElementById('contact').getBoundingClientRect().top > -window.innerHeight) {
-      document.getElementById('contact').classList.add('appear');
-    }
-  });
+  showOnScroll('contact');
 
   const handleChangeName = (e) => {
     setName(e.target.value)

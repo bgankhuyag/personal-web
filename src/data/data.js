@@ -3,7 +3,27 @@ export const projects = [
     name: "Personal Website V1",
     start_date: "05/01/2020",
     end_date: "06/01/2020",
-  }
+  },
+  {
+    name: "Sorting Algorithm Visualiser",
+    start_date: "05/01/2020",
+    end_date: "06/01/2020",
+  },
+  {
+    name: "Sudoku Solver",
+    start_date: "05/01/2020",
+    end_date: "06/01/2020",
+  },
+  {
+    name: "Investment App Frontend",
+    start_date: "05/01/2020",
+    end_date: "06/01/2020",
+  },
+  {
+    name: "Image to Speech Convertor App",
+    start_date: "05/01/2020",
+    end_date: "06/01/2020",
+  },
 ]
 
 export const exp = [

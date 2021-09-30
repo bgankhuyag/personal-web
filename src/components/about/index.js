@@ -1,15 +1,11 @@
 import React from 'react'
 import SubHeading from 'components/subHeading/index'
+import { showOnScroll } from 'utils/functions'
 import '../styles.css'
 
 const About = () => {
 
-  window.addEventListener("scroll", () => {
-    if (document.getElementById('about').getBoundingClientRect().top <= (window.innerHeight * 4/5) &&
-        document.getElementById('about').getBoundingClientRect().top > -window.innerHeight) {
-      document.getElementById('about').classList.add('appear');
-    }
-  });
+  showOnScroll('about');
 
   return (
     <div className="about sub-content" id="about">
