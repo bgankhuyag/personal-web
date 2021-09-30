@@ -10,6 +10,7 @@
   padding: 30px 0px;
   /* border-bottom: 1px dashed var(--sky-blue-crayola-2-a-2); */
   align-items: center;
+  justify-content: center;
 }
 
 .project-image-container {
@@ -20,8 +21,9 @@
 
 .project-image {
   width: 100%;
-  max-width: 380px;
-  min-width: 300px;
+  max-width: 400px;
+  min-width: 280px;
+  border-radius: 10px;
 }
 
 .project-info {
@@ -29,7 +31,7 @@
   padding: 10px;
   flex: 1;
   max-width: 400px;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .project-info .description {
@@ -40,7 +42,12 @@
   font-size: 1.5em;
 }
 
+.project-name {
+  margin-top: 0px;
+}
+
 .project-tools {
-  font-family: Consolas;
+  font-family: monospace;
   margin: 10px 0px;
+  color: var(--sky-blue-crayola-2-a-2);
 }

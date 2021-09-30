@@ -10,16 +10,17 @@ const Projects = () => {
 
   const info = (item) => (
     <div className="project-info">
-      <div>{item['name']}</div>
+      <h3 className="project-name">{item['name']}</h3>
       <div className="description">{item['description']}</div>
       {
         item['github'] ?
-        <div><a href={item['github']} className="link project-link" target="_blank"><i className="fab fa-github"></i></a></div>
+        <span><a href={item['github']} className="link project-link" target="_blank"><i className="fab fa-github"></i></a></span>
         : null
       }
+      <span><a href={item['github']} className="link project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
       <div className="project-tools">
       {
-        item['tools'].map((tool, index) => (<span key={'project' + item['name'] + index}>{tool} &nbsp;&nbsp;</span>))
+        item['tools'].map((tool, index) => (<span key={'project' + item['name'] + index}>{tool} &nbsp;</span>))
       }
       </div>
     </div>
