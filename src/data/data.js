@@ -54,46 +54,38 @@ export const projects = [
 export const exp = [
   {
     id: 0,
-    role: "Software Engineer Intern",
-    name: "HippoCards",
+    role: "Web Developer",
+    name: "Roanoke College",
     description: [
-      "write backend code Hippo",
-      "write frontend code"
+      "Design and build user-friendly web applications for clients implementing a variety of languages and technologies such as Laravel, HTML, CSS, JavaScript, JQuery, AJAX, Bootstrap, etc.",
+      "Provide maintenance, enhance features, and add new features to existing Laravel applications to fix bugs and improve web functionality.",
+      "Upgrade the older version of Laravel applications to a more recent version of Laravel.",
     ],
-    start_date: "03/26/2021",
-    end_date: "07/10/2021"
+    start_date: "Aug 2019",
+    end_date: null
   },
   {
     id: 1,
-    role: "Web Developer",
-    name: "Roanoke College IT",
-    description: [
-      "write backend code IT",
-      "write frontend code"
-    ],
-    start_date: "08/26/2019",
-    end_date: null
-  },
-  {
-    id: 2,
     role: "Software Engineer Intern",
     name: "HippoCards",
     description: [
-      "write backend code hi",
-      "write frontend code"
+      "Developed performant full-stack applications using Laravel, ReactJS, MySQL, Amazon Web Services, etc., for internal projects and training.",
+      "Collaborated with two other interns to design and develop the frontend of a customer data management application for tutoring centers using ReactJS, which allows users to view students’ attendance, students’ grades, payments paid, expected earnings, etc. depending on the user’s privilege.",
+      "Displayed quick learning ability by picking up ReactJS and creating a simple application implementing it in a week.",
     ],
-    start_date: "03/26/2021",
-    end_date: "07/10/2021"
+    start_date: "Mar 2021",
+    end_date: "Jul 2021"
   },
   {
-    id: 3,
-    role: "Web Developer",
-    name: "Roanoke College IT",
+    id: 2,
+    role: "IT Front Desk Receptionist",
+    name: "Roanoke College",
     description: [
-      "write backend code it",
-      "write frontend code"
+      "Reset students’ Roanoke College account and email password, and checked in laptops with software or hardware problems to be looked at by the technicians.",
+      "Answered phone calls received on the IT Student Help Desk phone and troubleshot technical problems students may be facing and walked them through the solution over the phone.",
+      "Answered and redirected phone calls received on the Roanoke College main phone.",
     ],
-    start_date: "08/26/2019",
-    end_date: null
-  }
+    start_date: "Jan 2019",
+    end_date: "May 2019"
+  },
 ]

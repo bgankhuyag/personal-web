@@ -28,7 +28,7 @@ const Experience = () => {
         {item.description.map((elem) => {
           i++;
           return (
-            <li key={i}>{elem}</li>
+            <li key={i}><span className="bulletpoint">{'</>'}</span><span>{elem}</span></li>
           )
         })}
         </ul>

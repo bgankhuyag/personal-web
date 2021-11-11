@@ -1,3 +1,7 @@
+.content {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -492,13 +496,14 @@ ul {
 li {
   list-style: none;
   margin-bottom: 10px;
+  line-height: 23px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  font-size: 0.95em;
 }
 
-li:before {
-    content:"</>";
-    font-size:0.9rem;
-    color: var(--sky-blue-crayola-2);
-    margin-right: 10px;
+.bulletpoint {
+  color: var(--sky-blue-crayola-2);
 }
 
 @media only screen and (max-width: 670px) {
