@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from 'components/button/index'
-import image from 'profile.jpeg'
+import image from 'images/profile.jpeg'
 import '../styles.css'
 
 const Header = () => {

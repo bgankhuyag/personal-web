@@ -1,3 +1,8 @@
+import investment from 'images/investment.png';
+import sort from 'images/sort.png';
+import sudoku from 'images/sudoku.png';
+import website from 'images/website.png';
+
 export const projects = [
   {
     name: "Personal Website V1",
@@ -7,44 +12,54 @@ export const projects = [
     tools: ['JavaScript', 'JQuery', 'Django', 'HTML&CSS'],
     link: 'https://batboldgankhuyag.pythonanywhere.com/',
     github: 'https://github.com/bgankhuyag/personal_website',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-c7v_TkW6lYdjDGOaU1QRqdLozjDOYuGg&usqp=CAU',
+    image: website,
+  },
+  {
+    name: "Personal Website V2",
+    start_date: "05/01/2020",
+    end_date: "06/01/2020",
+    description: 'Gives a visual for 5 different sorting algorithms: bubble, insertion, merge, quick, and heap sort. ',
+    tools: ['JavaScript', 'ReactJS', 'HTML&CSS'],
+    link: 'https://batboldgankhuyag.pythonanywhere.com/',
+    github: 'https://github.com/bgankhuyag/personal_website',
+    image: website,
   },
   {
     name: "Sorting Algorithm Visualiser",
     start_date: "05/01/2020",
     end_date: "06/01/2020",
     description: 'Gives a visual for 5 different sorting algorithms: bubble, insertion, merge, quick, and heap sort. ',
-    tools: ['JavaScript', 'JQuery', 'Django', 'HTML&CSS'],
+    tools: ['JavaScript', 'JQuery', 'HTML&CSS'],
     link: 'https://batboldgankhuyag.pythonanywhere.com/',
     github: 'https://github.com/bgankhuyag/personal_website',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-c7v_TkW6lYdjDGOaU1QRqdLozjDOYuGg&usqp=CAU',
+    image: sort,
   },
   {
     name: "Sudoku Solver",
     start_date: "05/01/2020",
     end_date: "06/01/2020",
     description: 'Gives a visual for 5 different sorting algorithms: bubble, insertion, merge, quick, and heap sort. ',
-    tools: ['JavaScript', 'JQuery', 'Django', 'HTML&CSS'],
+    tools: ['JavaScript', 'Python', 'HTML&CSS'],
     link: 'https://batboldgankhuyag.pythonanywhere.com/',
     github: 'https://github.com/bgankhuyag/personal_website',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-c7v_TkW6lYdjDGOaU1QRqdLozjDOYuGg&usqp=CAU',
+    image: sudoku,
   },
   {
     name: "Investment App Frontend",
     start_date: "05/01/2020",
     end_date: "06/01/2020",
     description: 'Gives a visual for 5 different sorting algorithms: bubble, insertion, merge, quick, and heap sort. ',
-    tools: ['JavaScript', 'JQuery', 'Django', 'HTML&CSS'],
+    tools: ['Flutter', 'Dart'],
     link: 'https://batboldgankhuyag.pythonanywhere.com/',
     github: 'https://github.com/bgankhuyag/personal_website',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-c7v_TkW6lYdjDGOaU1QRqdLozjDOYuGg&usqp=CAU',
+    image: investment,
   },
   {
     name: "Image to Speech Convertor App",
     start_date: "05/01/2020",
     end_date: "06/01/2020",
     description: 'Gives a visual for 5 different sorting algorithms: bubble, insertion, merge, quick, and heap sort. ',
-    tools: ['JavaScript', 'JQuery', 'Django', 'HTML&CSS'],
+    tools: ['JavaScript', 'React Native', 'HTML&CSS'],
     link: 'https://batboldgankhuyag.pythonanywhere.com/',
     github: 'https://github.com/bgankhuyag/personal_website',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-c7v_TkW6lYdjDGOaU1QRqdLozjDOYuGg&usqp=CAU',

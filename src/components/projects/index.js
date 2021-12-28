@@ -14,36 +14,33 @@ const Projects = () => {
       <div className="description">{item['description']}</div>
       {
         item['github'] ?
-        <span><a href={item['github']} className="link project-link" target="_blank"><i className="fab fa-github"></i></a></span>
+        <span><a href={item['github']} className="link project-link" target="_blank"><i className="fab fa-github"></i></a> &nbsp;&nbsp;</span>
         : null
       }
       <span><a href={item['github']} className="link project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
-      <div className="project-tools">
-      {
-        item['tools'].map((tool, index) => (<span key={'project' + item['name'] + index}>{tool} &nbsp;</span>))
-      }
-      </div>
+
     </div>
   )
 
   const image = (item) => (
-    <div className="project-image-container">
+    <div className="project-image-container" style={{marginBottom: 0}}>
       <img className="project-image" src={item['image']} />
     </div>
   )
 
   const contents = projects.map((item, index) => {
     return (
-      <div key={'project-' + index.toString()} className="project-item">
-        {
-          window.innerWidth <= 714 ? // store in state!!!
-          [image(item), info(item)]
-          :
-            index % 2 == 0 ?
+      <div key={'project-' + index.toString()} className="project-item-container">
+        <div className="project-item">
+          {
             [image(item), info(item)]
-            :
-            [info(item), image(item)]
+          }
+        </div>
+        <div className="project-tools">
+        {
+          item['tools'].map((tool, index) => (<span key={'project' + item['name'] + index}>{tool} &nbsp;</span>))
         }
+        </div>
       </div>
     );
   });
