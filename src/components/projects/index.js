@@ -11,7 +11,7 @@ const Projects = () => {
   const info = (item) => (
     <div className="project-info">
       <h3 className="project-name"><a href="#" className="link" target="blank" rel="noopener noreferrer">{item['name']}</a></h3>
-      <div className="description">{item['description']}</div>
+      <div className="description body-text">{item['description']}</div>
       {
         item['github'] ?
         <span><a href={item['github']} className="link project-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a> &nbsp;&nbsp;</span>

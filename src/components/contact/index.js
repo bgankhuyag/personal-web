@@ -169,7 +169,7 @@ const Contact = () => {
     <div className="contact sub-content" id="contact">
       <SubHeading number="11" text="Contact" />
       <div className="contact-content">
-        <form className="contact-form">
+        <form className="contact-form body-text">
           <p>
             If you have any questions about me or want to get
             in touch, feel free to contact me by email.
