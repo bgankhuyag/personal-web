@@ -2,6 +2,10 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
+.body-text {
+  font-family: 'Inter', sans-serif;
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -485,6 +489,7 @@ li {
 
 .bulletpoint {
   color: var(--sky-blue-crayola-2);
+  font-size: 0.8em;
 }
 
 @media only screen and (max-width: 670px) {

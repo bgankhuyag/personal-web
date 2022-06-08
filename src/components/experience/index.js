@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SubHeading from 'components/subHeading/index'
+import BulletPoint from 'components/bullet'
 import { exp } from 'data/data'
 import { showOnScroll } from 'utils/functions'
 import '../styles.css'
@@ -28,7 +29,7 @@ const Experience = () => {
         {item.description.map((elem) => {
           i++;
           return (
-            <li key={i}><span className="bulletpoint">{'</>'}</span><span>{elem}</span></li>
+            <BulletPoint key={i} elem={elem}></BulletPoint>
           )
         })}
         </ul>
