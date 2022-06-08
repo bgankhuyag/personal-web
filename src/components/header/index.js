@@ -4,23 +4,12 @@ import image from 'images/profile.jpeg'
 import '../styles.css'
 
 const Header = () => {
-  let intro_1 = Array.from('Hi, I am');
-  let intro_2 = Array.from('A Computer Science student');
-  let intro1;
-  let intro2;
-
-  intro1 = intro_1.map((letter, i) => {
-    return <span key={i} className="letter">{letter}</span>
-  });
-
-  intro2 = intro_2.map((letter, i) => {
-    return <span key={i} className="letter">{letter}</span>
-  });
-
   return (
     <div className="header">
       <div className="intro">
-        {intro1} <br /> <span className="name">Batbold Gankhuyag</span>. <br /> {intro2}. <br /> <br />
+        <p className='greeting'>Hi, I am</p> 
+        <h2 className="name highlight">Batbold Gankhuyag</h2> 
+        <p className='greeting' style={{marginBottom: '20px'}}>a Software Development Engineer at <span className='highlight'>Amazon</span>.</p>
         <Button size="1rem">Contact Me</Button>
       </div>
       <div className="profile">

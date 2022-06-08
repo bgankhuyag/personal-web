@@ -17,22 +17,6 @@
   --blizzard-blue: #ade8f4ff;
   --powder-blue: #caf0f8ff;
   --font: "Georama";
-  --gradient: linear-gradient(
-    45deg,
-    #f72585ff,
-    #b5179eff,
-    #7209b7ff,
-    #560badff,
-    #480ca8ff,
-    #3a0ca3ff,
-    #3f37c9ff,
-    #4361eeff,
-    #4895efff,
-    #4cc9f0ff
-  );
-  --gradient3: linear-gradient(45deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
-  --gradient1: linear-gradient(45deg, #f94144ff, #f3722cff, #f8961eff, #f9c74fff, #90be6dff, #43aa8bff, #577590ff);
-  --gradient2: linear-gradient(45deg, #bb0116ff, #e4b507ff, #fbe53aff, #fcfb7cff, #eae7d8ff);
 }
 
 .home {
