@@ -10,16 +10,16 @@ const Projects = () => {
 
   const info = (item) => (
     <div className="project-info">
-      <h3 className="project-name"><a href="#" className="link">{item['name']}</a></h3>
+      <h3 className="project-name"><a href="#" className="link" target="blank" rel="noopener noreferrer">{item['name']}</a></h3>
       <div className="description">{item['description']}</div>
       {
         item['github'] ?
-        <span><a href={item['github']} className="link project-link" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a> &nbsp;&nbsp;</span>
+        <span><a href={item['github']} className="link project-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a> &nbsp;&nbsp;</span>
         : null
       }
       {
         item['link'] ?
-        <span><a href={item['github']} className="link project-link" target="_blank" rel="noreferrer"><i class="fas fa-external-link-alt"></i></a></span>
+        <span><a href={item['github']} className="link project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a></span>
         : null
       }
     </div>

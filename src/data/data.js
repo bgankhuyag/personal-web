@@ -77,7 +77,7 @@ export const exp = [
       "Upgrade the older version of Laravel applications to a more recent version of Laravel.",
     ],
     start_date: "Aug 2019",
-    end_date: null
+    end_date: "April 2022"
   },
   {
     id: 1,
