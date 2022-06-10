@@ -59,3 +59,8 @@
   margin: 10px 10px;
   color: var(--sky-blue-crayola-2-a-2);
 }
+
+.show-more {
+  display: block;
+  text-align: center;
+}

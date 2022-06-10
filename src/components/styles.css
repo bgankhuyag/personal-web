@@ -278,6 +278,7 @@
   justify-content: space-between;
   font-size: 0.9rem;
   align-items: flex-end;
+  scroll-behavior: smooth;
 }
 
 .logo {

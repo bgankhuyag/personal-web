@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SubHeading from 'components/subHeading'
+import Button from 'components/button'
 import { showOnScroll } from 'utils/functions'
 import { projects } from 'data/data'
 import '../styles.css'
@@ -7,6 +8,7 @@ import './projectsStyles.css'
 
 const Projects = () => {
   showOnScroll('projects');
+  const [projectsDisplay, setProjectsDisplay] = useState(projects.slice(0, 3));
 
   const info = (item) => (
     <div className="project-info">
@@ -31,7 +33,7 @@ const Projects = () => {
     </div>
   )
 
-  const contents = projects.map((item, index) => {
+  const contents = projectsDisplay.map((item, index) => {
     return (
       <div key={'project-' + index.toString()} className="project-item-container">
         <div className="project-item">
@@ -48,12 +50,27 @@ const Projects = () => {
     );
   });
 
+  const showMore = () => {
+    let size = projectsDisplay.length + 3;
+    if (size > projects.length) {
+      size = projects.length;
+    }
+    setProjectsDisplay(projects.slice(0, size));
+  }
+
   return (
     <div className="projects sub-content" id="projects">
       <SubHeading number="10" text="Projects"/>
       <div className="projects-content">
         {contents}
       </div>
+      {
+        projectsDisplay.length != projects.length ?
+        <span className='show-more'>
+          <Button size="1rem" handleClick={showMore}>Show More</Button>
+        </span>
+        : null
+      }
     </div>
   )
 }
