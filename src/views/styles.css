@@ -1,5 +1,4 @@
 :root {
-  --imperial-red: #e63946ff;
   --honeydew: #f1faeeff;
   --powder-blue: #a8dadcff;
   --celadon-blue: #457b9dff;
@@ -41,5 +40,33 @@
 @media only screen and (max-width: 768px) {
   .content {
     padding: 0px 3rem;
+  }
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--prussian-blue);
+  display: flex;
+  justify-content: center;
+}
+
+.load-logo {
+  margin: auto;
+  /* width: 10px; */
+  font-size: 0.5rem;
+  display: flex;
+  animation: expand 3.2s ease;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
   }
 }

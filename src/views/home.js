@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from 'components/header'
 import Nav from 'components/nav'
 import Links from 'components/links'
@@ -10,6 +10,12 @@ import Contact from 'components/contact/index'
 import './styles.css'
 
 const Home = () => {
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoad(false), 3000);
+  }, []);
+
   const handleClose = () => {
     var menu = document.getElementById("menu-links");
     var content = document.getElementById("content");
@@ -45,17 +51,28 @@ const Home = () => {
   });
 
   return (
-    <div className="home">
-      <Links position="fixed" />
-      <div className="content" id="content">
-        <Nav />
-        <Header />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
-      <Menu handleClose={handleClose} />
+    <div>
+      {
+        load ?
+        <div className='loading'>
+          <div className='load-logo'>
+            <span className='logo'>BG</span>
+          </div>
+        </div>
+        :
+        <div  className="home">
+          <Links position="fixed" />
+          <div className="content" id="content">
+            <Nav />
+            <Header />
+            <About />
+            <Experience />
+            <Projects />
+            <Contact />
+          </div>
+          <Menu handleClose={handleClose} />
+        </div>       
+      }
     </div>
   )
 }
