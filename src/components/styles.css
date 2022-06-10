@@ -4,7 +4,22 @@
 
 .body-text {
   font-family: 'Inter', sans-serif;
-  /* color: var(--honeydew); */
+}
+
+.about {
+  max-width: 850px;
+  margin: auto;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 420px) {
+  .skills {
+    display: block;
+  }
 }
 
 .header {
@@ -543,8 +558,6 @@ li {
 .contact-content {
   text-align: center;
   font-size: 1.2rem;
-  /* margin: auto; */
-  /* width: 80%; */
 }
 
 .contact-link {

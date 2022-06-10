@@ -19,12 +19,13 @@ const About = () => {
         <p>
           Here are some of the technologies I have worked with recently:
         </p>
-        <ul>
+        <ul className='skills'>
           <BulletPoint elem={"React"}></BulletPoint>
           <BulletPoint elem={"Laravel"}></BulletPoint>
           <BulletPoint elem={"Python"}></BulletPoint>
           <BulletPoint elem={"C++"}></BulletPoint>
           <BulletPoint elem={"JavaScript"}></BulletPoint>
+          <BulletPoint elem={"HTML & CSS"}></BulletPoint>
           <BulletPoint elem={"SQL"}></BulletPoint>
           <BulletPoint elem={"Git"}></BulletPoint>
         </ul>
