@@ -5,11 +5,11 @@ import Button from 'components/button'
 import Toast from 'components/toast'
 import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
-import { user_id, service_id, template_id } from 'EnvironmentConfig/email'
+// import { user_id, service_id, template_id } from 'EnvironmentConfig/email'
 import { showOnScroll } from 'utils/functions'
 import '../styles.css'
 
-init(user_id);
+// init(user_id);
 
 const Error = ({ message }) => {
   return (
@@ -129,38 +129,38 @@ const Contact = () => {
   }
 
   const handleSendEmail = (e) => {
-    e.preventDefault();
-    if (!validateForm()) return false;
-    setLoad(true);
-    setToast({
-      item: 'Sending Message...',
-      duration: 0,
-      load: true
-    });
-    emailjs.send(service_id, template_id,{
-      from_name: name,
-      message: message,
-      reply_to: email,
-    }).then((response) => {
-      setName('');
-      setEmail('');
-      setMessage('');
-      setLoad(false);
-      setToast({
-        item: 'Message successfully sent!',
-        duration: 3000,
-        load: false,
-        success: true
-      });
-    }, (error) => {
-      setLoad(false);
-      setToast({
-        item: 'Sorry, there was an error!',
-        duration: 3000,
-        load: false,
-        success: false
-      });
-    });
+    // e.preventDefault();
+    // if (!validateForm()) return false;
+    // setLoad(true);
+    // setToast({
+    //   item: 'Sending Message...',
+    //   duration: 0,
+    //   load: true
+    // });
+    // emailjs.send(service_id, template_id,{
+    //   from_name: name,
+    //   message: message,
+    //   reply_to: email,
+    // }).then((response) => {
+    //   setName('');
+    //   setEmail('');
+    //   setMessage('');
+    //   setLoad(false);
+    //   setToast({
+    //     item: 'Message successfully sent!',
+    //     duration: 3000,
+    //     load: false,
+    //     success: true
+    //   });
+    // }, (error) => {
+    //   setLoad(false);
+    //   setToast({
+    //     item: 'Sorry, there was an error!',
+    //     duration: 3000,
+    //     load: false,
+    //     success: false
+    //   });
+    // });
   }
 
   return (
