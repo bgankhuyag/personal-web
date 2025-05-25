@@ -1,25 +1,19 @@
 :root {
   --honeydew: #f1faeeff;
+  --light-honeydew: #edf2fb;
   --powder-blue: #a8dadcff;
-  --celadon-blue: #457b9dff;
-  --prussian-blue: #13243b;
   --light-blue: #162d4d;
   --navy-blue: #03045eff;
-  --dark-cornflower-blue: #023e8aff;
-  --star-command-blue: #0077b6ff;
-  --blue-green: #0096c7ff;
-  --cerulean-crayola: #00b4d8ff;
-  --sky-blue-crayola: #48cae4ff;
-  --sky-blue-crayola-2: rgb(166, 242, 255);
-  --sky-blue-crayola-2-a-2: rgb(166, 242, 255, 0.55);
-  --sky-blue-crayola-2-a: rgb(166, 242, 255, 0.15);
-  --blizzard-blue: #ade8f4ff;
-  --powder-blue: #caf0f8ff;
+  --dark-blue: #001d3d;
+  --sky-blue: #48cae4ff;
+  --sky-blue-2: rgb(166, 242, 255);
+  --sky-blue-2-a-2: rgb(166, 242, 255, 0.55);
+  --sky-blue-2-a: rgb(166, 242, 255, 0.15);
   --font: "Georama";
 }
 
 .home {
-  background-color: var(--prussian-blue);
+  background-color: var(--dark-blue);
   font-family: sans-serif;
   color: var(--honeydew);
 }
@@ -28,7 +22,7 @@
   position: relative;
   margin: auto;
   padding: 0px 8rem;
-  max-width: 1800px;
+  max-width: 1400px;
 }
 
 @media only screen and (max-width: 948px) {
@@ -46,7 +40,7 @@
 .loading {
   width: 100vw;
   height: 100vh;
-  background-color: var(--prussian-blue);
+  background-color: var(--dark-blue);
   display: flex;
   justify-content: center;
 }

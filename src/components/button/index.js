@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles.css'
+import './button.css'
 
 const Button = ({
   children,
@@ -9,14 +10,12 @@ const Button = ({
   load,
 }) => {
   return (
-    <button className="button" style={{ fontSize: size, background: load ? 'rgb(166, 242, 255, 0.15)' : null }} onClick={handleClick} disabled={disabled || load ? true : false}>
-      {
-        load ?
-        <i className="fas fa-spinner spinner"></i>
-        : null
-      }
-      {children}
-    </button>
+    <div>
+      <button onClick={handleClick}>
+        <span className="button_top"> { children }
+        </span>
+      </button>
+    </div>
   )
 }
 
