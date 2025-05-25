@@ -8,9 +8,9 @@ const Nav = () => {
     <div className="nav">
       <Logo />
       <div className="nav-links">
-        <a href="#about" className="link"><span className="number">00.</span> About</a>
-        <a href="#experience" className="link"><span className="number">01.</span> Experience</a>
-        <a href="#projects" className="link"><span className="number">10.</span> Projects</a>
+        <a href="#about" className="link">About</a>
+        <a href="#experience" className="link">Experience</a>
+        <a href="#projects" className="link">Projects</a>
         <Button>Resume</Button>
       </div>
       <div className="menu" id="menu">

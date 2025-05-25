@@ -369,6 +369,7 @@
 .nav-links .link {
   border-bottom: 1px solid var(--sky-blue-2);
   z-index: 1;
+  margin-left: 30px;
 }
 
 .nav-links .link::before {
@@ -532,112 +533,6 @@ li {
   position: relative;
   animation: pop-up 1s;
   opacity: 1;
-}
-
-.contact {
-  max-width: 800px;
-  margin: auto;
-}
-
-.contact-content {
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.contact-link {
-  margin: 20px;
-  font-size: 1.4em;
-  transition: 0.3s;
-  top: 0px;
-}
-
-.contact-link:hover {
-  top: -10px;
-}
-
-.contact-message {
-  margin-bottom: 20px;
-}
-
-.contact-form {
-  text-align: left;
-}
-
-.contact-form .info {
-  display: flex;
-  grid-gap: 5%;
-  flex-wrap: wrap;
-}
-
-.contact-form .info div {
-  flex: 1;
-  min-width: 220px;
-}
-
-.input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: var(--light-blue);
-  resize: vertical;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  font-size: 0.8em;
-}
-
-.input:focus {
-  outline: none;
-}
-
-.input:not(.error):focus {
-  animation: focus 0.3s;
-  outline: none;
-  border: 2px solid var(--sky-blue-2);
-}
-
-@keyframes focus {
-  0% {
-    border: 2px solid inherit;
-  }
-  100% {
-    border: 2px solid var(--sky-blue-2);
-  }
-}
-
-.error {
-  animation: error 0.2s;
-  border: 2px solid var(--imperial-red);
-}
-
-@keyframes error {
-  0% {
-    border: 2px solid var(--sky-blue-2);
-  }
-  100% {
-    border: 2px solid var(--imperial-red);
-  }
-}
-
-.error-message {
-  font-size: 0.6em;
-  color: var(--imperial-red);
-}
-
-.spinner {
-  animation: spin 1s linear infinite;
-  margin-right: 10px;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .toast {

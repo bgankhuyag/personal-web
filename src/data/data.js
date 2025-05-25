@@ -68,16 +68,16 @@ export const projects = [
 
 export const exp = [
   {
-    id: 0,
-    role: "Web Developer",
-    name: "Roanoke College",
+    id: 1,
+    role: "Software Engineer",
+    name: "Amazon Web Services",
     description: [
-      "Design and build user-friendly web applications for clients implementing a variety of languages and technologies such as Laravel, HTML, CSS, JavaScript, JQuery, AJAX, Bootstrap, etc.",
-      "Provide maintenance, enhance features, and add new features to existing Laravel applications to fix bugs and improve web functionality.",
-      "Upgrade the older version of Laravel applications to a more recent version of Laravel.",
+      "Developed performant full-stack applications using Laravel, ReactJS, MySQL, Amazon Web Services, etc., for internal projects and training.",
+      "Collaborated with two other interns to design and develop the frontend of a customer data management application for tutoring centers using ReactJS, which allows users to view students’ attendance, students’ grades, payments paid, expected earnings, etc. depending on the user’s privilege.",
+      "Displayed quick learning ability by picking up ReactJS and creating a simple application implementing it in a week.",
     ],
-    start_date: "Aug 2019",
-    end_date: "April 2022"
+    start_date: "Aug 2022",
+    end_date: "Present"
   },
   {
     id: 1,
@@ -92,15 +92,15 @@ export const exp = [
     end_date: "Jul 2021"
   },
   {
-    id: 2,
-    role: "IT Front Desk Receptionist",
+    id: 0,
+    role: "Web Developer",
     name: "Roanoke College",
     description: [
-      "Reset students’ Roanoke College account and email password, and checked in laptops with software or hardware problems to be looked at by the technicians.",
-      "Answered phone calls received on the IT Student Help Desk phone and troubleshot technical problems students may be facing and walked them through the solution over the phone.",
-      "Answered and redirected phone calls received on the Roanoke College main phone.",
+      "Design and build user-friendly web applications for clients implementing a variety of languages and technologies such as Laravel, HTML, CSS, JavaScript, JQuery, AJAX, Bootstrap, etc.",
+      "Provide maintenance, enhance features, and add new features to existing Laravel applications to fix bugs and improve web functionality.",
+      "Upgrade the older version of Laravel applications to a more recent version of Laravel.",
     ],
-    start_date: "Jan 2019",
-    end_date: "May 2019"
+    start_date: "Aug 2019",
+    end_date: "April 2022"
   },
 ]
