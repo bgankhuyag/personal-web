@@ -6,7 +6,6 @@ import Menu from 'components/menu'
 import Experience from 'components/experience/index'
 import About from 'components/about/index'
 import Projects from 'components/projects/index'
-import Contact from 'components/contact/index'
 import './styles.css'
 
 const Home = () => {
@@ -68,7 +67,6 @@ const Home = () => {
             <About />
             <Experience />
             <Projects />
-            <Contact />
           </div>
           <Menu handleClose={handleClose} />
         </div>       
